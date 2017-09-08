@@ -9,10 +9,15 @@ import android.widget.Button;
 import com.chatserver.dd.chat.Menu1.ActivityMenu1;
 import com.chatserver.dd.chat.Menu2.ActivityMenu2;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import static com.chatserver.dd.chat.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+    private AdView mAdView;
 
     private Button mBtn1;
     private Button mBtn2;
@@ -23,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(activity_main);
         initView();
 
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
 
