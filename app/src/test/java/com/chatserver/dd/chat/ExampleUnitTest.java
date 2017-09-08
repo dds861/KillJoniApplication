@@ -1,4 +1,4 @@
-package com.example.dd.recyclerview;
+package com.chatserver.dd.chat;
 
 import org.junit.Test;
 

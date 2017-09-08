@@ -1,4 +1,4 @@
-package com.example.dd.recyclerview;
+package com.chatserver.dd.chat;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
