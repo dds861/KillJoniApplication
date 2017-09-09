@@ -12,16 +12,22 @@ import com.chatserver.dd.chat.Menu2.ActivityMenu2;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.firebase.analytics.FirebaseAnalytics;
 
 import static com.chatserver.dd.chat.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //Firebase Analytics
+    private FirebaseAnalytics mFirebaseAnalytics;
 
+    //Admob banner
     private AdView mAdView;
 
+    //Admob page ads
     private InterstitialAd mInterstitialAd;
 
+    //Buttons on MainAcitivity
     private Button mBtn1;
     private Button mBtn2;
 
@@ -31,14 +37,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(activity_main);
         initView();
 
+        //Firebase Analytics
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
+        //Admob banner
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        //Admob page ads
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3941279894802307/3018755401");
+        mInterstitialAd.setAdUnitId(getString(R.string.InterstitialAd));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+
 
     }
 
@@ -51,29 +64,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Bundle bundle = new Bundle();
         switch (v.getId()) {
             case R.id.btn1:
+
+                //Admob page ads
                 if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
                 } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
+
+                //open new Activity
                 Intent intent1 = new Intent(this, ActivityMenu1.class);
                 startActivity(intent1);
+
+                //Firebase analytics, to know how many clicked on this button
+                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "1");
+                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "kill_joni server");
+                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
                 break;
+
             case R.id.btn2:
+
+                //Admob page ads
                 if (mInterstitialAd.isLoaded()) {
                     mInterstitialAd.show();
                 } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
+                //open new Activity
                 Intent intent2 = new Intent(this, ActivityMenu2.class);
                 startActivity(intent2);
+
+                //Firebase analytics, to know how many clicked on this button
+                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "2");
+                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "shooter server");
+                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
+
                 break;
         }
     }
-
-//        productList.add(new Product("kill_joni JONI AST","46.174.48.29:27202",R.mipmap.ic_mansion));
-//        productList.add(new Product("kill_joni Sho0teR-","46.174.48.42:27228",R.mipmap.ic_mansion));
-
 }

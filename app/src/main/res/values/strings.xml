@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Серверный чат</string>
+    <string name="banner1">ca-app-pub-3941279894802307/5251711663</string>
+    <string name="InterstitialAd">ca-app-pub-3941279894802307/3018755401</string>
+    <string name="button1Text">kill_joni JONI AST \n\n 46.174.48.29:27202</string>
+    <string name="button2Text">kill_joni Sho0teR-  \n\n 46.174.48.42:27228</string>
 </resources>
