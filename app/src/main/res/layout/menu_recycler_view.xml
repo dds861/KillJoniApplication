@@ -13,27 +13,16 @@
         android:id="@+id/recyclerViewMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/adView"
         android:scrollbars="vertical" />
 
-    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3941279894802307/5251711663">
-
-    </com.google.android.gms.ads.AdView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/adView"
-
-
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_menu_rotate" />
 

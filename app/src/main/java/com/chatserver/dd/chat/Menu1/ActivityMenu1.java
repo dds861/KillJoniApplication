@@ -11,8 +11,6 @@ import android.view.View;
 
 import com.chatserver.dd.chat.APIService;
 import com.chatserver.dd.chat.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -34,17 +32,11 @@ public class ActivityMenu1 extends AppCompatActivity {
     String url;
     APIService apiService;
 
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_recycler_view);
-
-
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
 
         //Setting the url

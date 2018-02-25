@@ -1,5 +1,6 @@
 package com.chatserver.dd.chat.Menu2;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,8 +14,6 @@ import com.chatserver.dd.chat.APIService;
 import com.chatserver.dd.chat.Menu1.AdapterMenu1;
 import com.chatserver.dd.chat.Menu1.UserMenu1;
 import com.chatserver.dd.chat.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 
 import java.util.List;
 
@@ -23,7 +22,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 
 public class ActivityMenu2 extends AppCompatActivity {
 
@@ -36,16 +34,11 @@ public class ActivityMenu2 extends AppCompatActivity {
     String url;
     APIService apiService;
 
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_recycler_view);
-
-        mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
         //Setting the url
         url = "http://shooter.myarena.ru/android/";
