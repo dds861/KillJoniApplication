@@ -1,8 +1,6 @@
 package com.chatserver.dd.chat;
 
 
-import com.chatserver.dd.chat.Menu1.UserMenu1;
-
 import java.util.List;
 
 import retrofit2.Call;
@@ -13,9 +11,17 @@ import retrofit2.http.GET;
  */
 
 public interface APIService {
-    //url for Chat
-    @GET("hlstats_Events_Chat.php")
-    Call<List<UserMenu1>> getUserDataChat();
+    //url for "All" Words
+    @GET("hlstats_Events_AllWords.php")
+    Call<List<Model>> getAllWords();
+
+    //url for "Server" Words
+    @GET("hlstats_Events_ServerWords.php")
+    Call<List<Model>> getServerWords();
+
+    //url for "Vip" Words
+    @GET("hlstats_Events_VipWords.php")
+    Call<List<Model>> getVipWords();
 
 
 

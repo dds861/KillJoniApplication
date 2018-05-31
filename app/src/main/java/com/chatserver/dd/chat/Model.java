@@ -1,17 +1,17 @@
-package com.chatserver.dd.chat.Menu2;
+package com.chatserver.dd.chat;
 
 /**
  * Created by dd on 03.05.2017.
  */
 
-public class UserMenu2 {
+public class Model {
     //Chat Variables
     private String eventTime;
     private String message;
     private String lastName;
 
     //Chat contructer
-    public UserMenu2(String eventTime, String message, String lastName) {
+    public Model(String eventTime, String message, String lastName) {
         this.eventTime      = eventTime;
         this.message        = message;
         this.lastName       = lastName;

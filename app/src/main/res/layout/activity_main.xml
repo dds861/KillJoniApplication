@@ -7,22 +7,42 @@
     android:orientation="vertical"
     tools:context="com.chatserver.dd.chat.MainActivity">
 
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_light"
+        android:gravity="right"
+        android:padding="10dp"
+        android:text="@string/IpAddress" />
+
     <Button
         android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:backgroundTint="@color/primary_light"
         android:padding="30dp"
         android:text="@string/button1Text" />
-
 
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:backgroundTint="@color/primary_light"
         android:padding="30dp"
         android:text="@string/button2Text" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/primary_light"
+        android:padding="30dp"
+        android:text="@string/button3Text" />
+
 
 </LinearLayout>

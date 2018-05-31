@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Серверный чат</string>
-    <string name="button1Text" translatable="false">kill_joni JONI AST \n\n 46.174.48.29:27202</string>
-    <string name="button2Text" translatable="false">kill_joni Sho0teR-  \n\n 46.174.48.42:27228</string>
+    <string name="app_name">kill_joni JONI AST</string>
+    <string name="button1Text" translatable="false">All Words</string>
+    <string name="button2Text" translatable="false">Server Words</string>
+    <string name="button3Text" translatable="false">Vip Words</string>
+    <string name="website">http://killjoniast.myarena.ru/android/</string>
+    <string name="IpAddress">Server IP Address: 46.174.48.29:27202</string>
 </resources>

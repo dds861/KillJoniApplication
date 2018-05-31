@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.Menu2;
+package com.chatserver.dd.chat;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,21 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.chatserver.dd.chat.Menu1.UserMenu1;
-import com.chatserver.dd.chat.R;
-
 import java.util.List;
 
 /**
  * Created by dd on 03.05.2017.
  */
 
-public class AdapterMenu2 extends RecyclerView.Adapter<AdapterMenu2.ViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private List<UserMenu1> item;
+    private List<Model> item;
     Context context;
 
-    public AdapterMenu2(Context context, List<UserMenu1> item) {
+    public Adapter(Context context, List<Model> item) {
         this.item = item;
         this.context = context;
     }

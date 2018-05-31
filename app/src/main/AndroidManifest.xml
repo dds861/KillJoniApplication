@@ -18,8 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.chatserver.dd.chat.Menu1.ActivityMenu1" android:parentActivityName=".MainActivity" />
-        <activity android:name="com.chatserver.dd.chat.Menu2.ActivityMenu2" android:parentActivityName=".MainActivity"/>
+        <activity android:name="com.chatserver.dd.chat.Activities.ActivityAllWords" android:parentActivityName=".MainActivity" />
+        <activity android:name="com.chatserver.dd.chat.Activities.ActivityServerWords" android:parentActivityName=".MainActivity"/>
+        <activity android:name="com.chatserver.dd.chat.Activities.ActivityVipWords" android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

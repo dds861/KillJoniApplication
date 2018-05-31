@@ -1,4 +1,5 @@
-package com.chatserver.dd.chat.Menu1;
+package com.chatserver.dd.chat.Activities;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 
 import com.chatserver.dd.chat.APIService;
+import com.chatserver.dd.chat.Adapter;
+import com.chatserver.dd.chat.Model;
 import com.chatserver.dd.chat.R;
 
 import java.util.List;
@@ -20,13 +23,12 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
-public class ActivityMenu1 extends AppCompatActivity {
+public class ActivityServerWords extends AppCompatActivity {
 
     private LinearLayoutManager layoutManager;
-    private List<UserMenu1> userList = null;
+    private List<Model> userList = null;
     private RecyclerView recyclerView;
-    private Call<List<UserMenu1>> call = null;
+    private Call<List<Model>> call = null;
 
     Retrofit retrofit = null;
     String url;
@@ -38,9 +40,8 @@ public class ActivityMenu1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_recycler_view);
 
-
         //Setting the url
-        url = "http://killjoniast.myarena.ru/android/";
+        url = getString(R.string.website);
 
         //Initializing Retrofit with building it
         createRetrofit(url);
@@ -71,7 +72,7 @@ public class ActivityMenu1 extends AppCompatActivity {
 
     private void initializeCall(int temp) {
 
-        call = apiService.getUserDataChat();
+        call = apiService.getServerWords();
     }
 
     private void getUserList() {
@@ -85,28 +86,24 @@ public class ActivityMenu1 extends AppCompatActivity {
         initializeCall(temp);
 
 
-        call.enqueue(new Callback<List<UserMenu1>>() {
+        call.enqueue(new Callback<List<Model>>() {
             @Override
-            public void onResponse(Call<List<UserMenu1>> call, Response<List<UserMenu1>> response) {
+            public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
 
                 userList = response.body();
                 recyclerView = (RecyclerView) findViewById(R.id.recyclerViewMain);
-                layoutManager = new LinearLayoutManager(ActivityMenu1.this);
+                layoutManager = new LinearLayoutManager(ActivityServerWords.this);
                 recyclerView.setLayoutManager(layoutManager);
 
+                Adapter adapterMenu2 = new Adapter(getApplicationContext(), userList);
 
-                AdapterMenu1 adapterMenu1 = new AdapterMenu1(getApplicationContext(), userList);
-
-                recyclerView.setAdapter(adapterMenu1);
+                recyclerView.setAdapter(adapterMenu2);
             }
 
             @Override
-            public void onFailure(Call<List<UserMenu1>> call, Throwable t) {
+            public void onFailure(Call<List<Model>> call, Throwable t) {
                 Log.d("123", t.getMessage());
             }
         });
-
-
     }
-
 }
