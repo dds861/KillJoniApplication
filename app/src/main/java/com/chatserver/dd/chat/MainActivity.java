@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.chatserver.dd.chat.Activities.ActivityAdminConnect;
 import com.chatserver.dd.chat.Activities.ActivityAllWords;
 import com.chatserver.dd.chat.Activities.ActivityServerWords;
 import com.chatserver.dd.chat.Activities.ActivityVipWords;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtn1;
     private Button mBtn2;
     private Button mBtn3;
+    private Button mBtn4;
 
 
     @Override
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtn2.setOnClickListener(this);
         mBtn3 = (Button) findViewById(R.id.btn3);
         mBtn3.setOnClickListener(this);
+        mBtn4 = (Button) findViewById(R.id.btn4);
+        mBtn4.setOnClickListener(this);
     }
 
     @Override
@@ -60,6 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 //open new Activity
                 intent1 = new Intent(this, ActivityVipWords.class);
+                break;
+            case R.id.btn4:// TODO 18/08/15
+
+                intent1 = new Intent(this, ActivityAdminConnect.class);
                 break;
         }
         startActivity(intent1);

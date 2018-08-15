@@ -5,4 +5,5 @@
     <string name="button3Text" translatable="false">Vip Words</string>
     <string name="website">http://killjoniast.myarena.ru/android/</string>
     <string name="IpAddress">Server IP Address: 46.174.48.29:27202</string>
+    <string name="button4Text">Admin Connect</string>
 </resources>

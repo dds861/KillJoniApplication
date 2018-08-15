@@ -23,6 +23,10 @@ public interface APIService {
     @GET("hlstats_Events_VipWords.php")
     Call<List<Model>> getVipWords();
 
+    //url for "AdminConnect" Words
+    @GET("hlstats_Events_adminConnect.php")
+    Call<List<Model>> getAdminConnect();
+
 
 
 }
