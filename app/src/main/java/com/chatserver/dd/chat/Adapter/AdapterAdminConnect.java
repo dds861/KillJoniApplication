@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.AdminConnect;
+package com.chatserver.dd.chat.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.chatserver.dd.chat.Model.ModelAdminConnect;
 import com.chatserver.dd.chat.R;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public class AdapterAdminConnect extends RecyclerView.Adapter<AdapterAdminConnec
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.menu1_content, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.content_others, null);
         return new ViewHolder(view);
     }
 

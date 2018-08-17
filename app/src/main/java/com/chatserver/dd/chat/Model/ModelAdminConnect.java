@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.AdminConnect;
+package com.chatserver.dd.chat.Model;
 
 import com.google.gson.annotations.SerializedName;
 

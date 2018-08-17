@@ -11,17 +11,17 @@
         android:roundIcon="@mipmap/ic_rifle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.chatserver.dd.chat.MainActivity">
+        <activity
+            android:name=".Main3Activity"
+            android:label="@string/title_activity_main3"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.chatserver.dd.chat.Activities.ActivityAllWords" android:parentActivityName=".MainActivity" />
-        <activity android:name="com.chatserver.dd.chat.Activities.ActivityServerWords" android:parentActivityName=".MainActivity"/>
-        <activity android:name="com.chatserver.dd.chat.Activities.ActivityVipWords" android:parentActivityName=".MainActivity"/>
-        <activity android:name="com.chatserver.dd.chat.Activities.ActivityAdminConnect" android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
