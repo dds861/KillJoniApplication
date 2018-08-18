@@ -18,12 +18,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chatserver.dd.chat.Activity.ActivityAdminConnect2;
+import com.chatserver.dd.chat.Activity.ActivityAdminConnect;
 import com.chatserver.dd.chat.Activity.ActivityAllWords;
+import com.chatserver.dd.chat.Activity.ActivityMessage;
 import com.chatserver.dd.chat.Activity.ActivityPlayers;
-import com.chatserver.dd.chat.Activity.ActivityServerWords2;
+import com.chatserver.dd.chat.Activity.ActivityServerWords;
 import com.chatserver.dd.chat.Activity.ActivityStatus;
-import com.chatserver.dd.chat.Activity.ActivityVipWords2;
+import com.chatserver.dd.chat.Activity.ActivityVipWords;
 
 public class Main3Activity extends AppCompatActivity {
 
@@ -143,15 +144,15 @@ public class Main3Activity extends AppCompatActivity {
                     activityAllWords.getUserList();
                     return rootView;
                 case 2:
-                    ActivityServerWords2 serverWords = new ActivityServerWords2(rootView);
+                    ActivityServerWords serverWords = new ActivityServerWords(rootView);
                     serverWords.getUserList();
                     return rootView;
                 case 3:
-                    ActivityVipWords2 vipWords2 = new ActivityVipWords2(rootView);
+                    ActivityVipWords vipWords2 = new ActivityVipWords(rootView);
                     vipWords2.getUserList();
                     return rootView;
                 case 4:
-                    ActivityAdminConnect2 adminConnect2 = new ActivityAdminConnect2(rootView);
+                    ActivityAdminConnect adminConnect2 = new ActivityAdminConnect(rootView);
                     adminConnect2.getUserList();
                     return rootView;
                 case 5:
@@ -166,6 +167,12 @@ public class Main3Activity extends AppCompatActivity {
                     activityStatus3.getPlayersList();
 
                     return rootView3;
+                case 7:
+                    View rootView4 = inflater.inflate(R.layout.fragment_message, container, false);
+                    ActivityMessage activityMessage = new ActivityMessage(rootView4);
+                    activityMessage.getPlayersList();
+
+                    return rootView4;
                 default:
                     break;
             }

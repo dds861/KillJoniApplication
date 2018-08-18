@@ -17,12 +17,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class ActivityVipWords2 extends AppCompatActivity {
+public class ActivityVipWords extends AppCompatActivity {
 
     ;
     View view;
 
-    public ActivityVipWords2(View view) {
+    public ActivityVipWords(View view) {
         this.view = view;
     }
 

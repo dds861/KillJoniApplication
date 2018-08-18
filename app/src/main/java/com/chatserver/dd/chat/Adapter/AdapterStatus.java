@@ -17,12 +17,12 @@ import java.util.Date;
  * Created by dd on 03.05.2017.
  */
 
-public class AdapterStatus2 extends RecyclerView.Adapter<AdapterStatus2.ViewHolder> {
+public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.ViewHolder> {
 
     private Context context;
     private Model_Status_Players modelStatus;
 
-    public AdapterStatus2(Context context, Model_Status_Players modelStatus) {
+    public AdapterStatus(Context context, Model_Status_Players modelStatus) {
         this.context = context;
         this.modelStatus = modelStatus;
     }

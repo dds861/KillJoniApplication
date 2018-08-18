@@ -5,9 +5,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.chatserver.dd.chat.Adapter.Adapter;
+import com.chatserver.dd.chat.Adapter.AdapterAdminConnect;
+import com.chatserver.dd.chat.Model.ModelAdminConnect;
 import com.chatserver.dd.chat.Retrofit.ConnectRetrofit;
-import com.chatserver.dd.chat.Model.Model;
 import com.chatserver.dd.chat.R;
 
 import java.util.List;
@@ -17,12 +17,12 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class ActivityServerWords2 extends AppCompatActivity {
+public class ActivityAdminConnect extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+    ;
     View view;
 
-    public ActivityServerWords2(View view) {
+    public ActivityAdminConnect(View view) {
         this.view = view;
     }
 
@@ -30,21 +30,21 @@ public class ActivityServerWords2 extends AppCompatActivity {
 
         //initializing Call
         ConnectRetrofit connectRetrofit = new ConnectRetrofit(view);
-        Call<List<Model>> call = connectRetrofit.getApiService().getServerWords();
+        Call<List<ModelAdminConnect>> call = connectRetrofit.getApiService().getAdminConnect();
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewMain);
-        call.enqueue(new Callback<List<Model>>() {
+        final RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewMain);
+        call.enqueue(new Callback<List<ModelAdminConnect>>() {
             @Override
-            public void onResponse(Call<List<Model>> call, Response<List<Model>> response) {
-                List<Model> userList = response.body();
+            public void onResponse(Call<List<ModelAdminConnect>> call, Response<List<ModelAdminConnect>> response) {
+                List<ModelAdminConnect> userList = response.body();
                 LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
                 recyclerView.setLayoutManager(layoutManager);
-                Adapter adapterMenu1 = new Adapter(view.getContext(), userList);
+                AdapterAdminConnect adapterMenu1 = new AdapterAdminConnect(view.getContext(), userList);
                 recyclerView.setAdapter(adapterMenu1);
             }
 
             @Override
-            public void onFailure(Call<List<Model>> call, Throwable t) {
+            public void onFailure(Call<List<ModelAdminConnect>> call, Throwable t) {
             }
         });
 

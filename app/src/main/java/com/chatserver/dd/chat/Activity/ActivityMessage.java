@@ -8,7 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.chatserver.dd.chat.Adapter.AdapterStatus;
+import com.chatserver.dd.chat.Adapter.AdapterPlayers;
 import com.chatserver.dd.chat.Model.Model_Status_Players;
 import com.chatserver.dd.chat.R;
 import com.chatserver.dd.chat.Retrofit.ConnectRetrofit;
@@ -18,28 +18,30 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class ActivityStatus extends AppCompatActivity {
+public class ActivityMessage extends AppCompatActivity {
 
     View view;
 
-    public ActivityStatus(View view) {
+    public ActivityMessage(View view) {
         this.view = view;
     }
 
-    public void getUserList() {
+    public void getPlayersList() {
 
         //initializing Call
         ConnectRetrofit connectRetrofit = new ConnectRetrofit(view);
-        Call<Model_Status_Players> call = connectRetrofit.getApiServiceStatus().getUserData("status", getToken(view.getContext()));
+        Call<Model_Status_Players> call = connectRetrofit.getApiServiceStatus().getPlayers("status", getToken(view.getContext()));
 
         call.enqueue(new Callback<Model_Status_Players>() {
             @Override
             public void onResponse(Call<Model_Status_Players> call, Response<Model_Status_Players> response) {
-                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewStatus);
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewMessagePlayers);
                 Model_Status_Players model_status = response.body();
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(view.getContext());
                 recyclerView.setLayoutManager(layoutManager);
-                AdapterStatus adapterMenu1 = new AdapterStatus(view.getContext(), model_status);
+
+
+                AdapterPlayers adapterMenu1 = new AdapterPlayers(view.getContext(), model_status);
                 recyclerView.setAdapter(adapterMenu1);
             }
 
