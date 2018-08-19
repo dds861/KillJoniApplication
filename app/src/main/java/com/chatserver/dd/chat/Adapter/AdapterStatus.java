@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.chatserver.dd.chat.Model.Model_Status_Players;
+import com.chatserver.dd.chat.Model.ModelStatusPlayers;
 import com.chatserver.dd.chat.R;
 
 import java.text.SimpleDateFormat;
@@ -20,9 +20,9 @@ import java.util.Date;
 public class AdapterStatus extends RecyclerView.Adapter<AdapterStatus.ViewHolder> {
 
     private Context context;
-    private Model_Status_Players modelStatus;
+    private ModelStatusPlayers modelStatus;
 
-    public AdapterStatus(Context context, Model_Status_Players modelStatus) {
+    public AdapterStatus(Context context, ModelStatusPlayers modelStatus) {
         this.context = context;
         this.modelStatus = modelStatus;
     }

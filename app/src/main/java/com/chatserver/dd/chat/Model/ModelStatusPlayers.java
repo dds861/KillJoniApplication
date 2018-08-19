@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Model_Status_Players {
+public class ModelStatusPlayers {
     @SerializedName("status")
     private String status;
     @SerializedName("online")

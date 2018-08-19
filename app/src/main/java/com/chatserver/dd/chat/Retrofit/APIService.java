@@ -3,8 +3,8 @@ package com.chatserver.dd.chat.Retrofit;
 
 import com.chatserver.dd.chat.Model.Model;
 import com.chatserver.dd.chat.Model.ModelAdminConnect;
-import com.chatserver.dd.chat.Model.Model_unknown;
-import com.chatserver.dd.chat.Model.Model_Status_Players;
+import com.chatserver.dd.chat.Model.ModelConsoleCmd;
+import com.chatserver.dd.chat.Model.ModelStatusPlayers;
 
 import java.util.List;
 
@@ -36,19 +36,23 @@ public interface APIService {
 
     //url for myarena Status
     @GET("api.php")
-    Call<Model_Status_Players> getUserData(@Query("query") String query, @Query("token") String token);
+    Call<ModelStatusPlayers> getUserData(@Query("query") String query, @Query("token") String token);
 
     //url for myarena Status
     @GET("api.php")
-    Call<Model_Status_Players> getPlayers(@Query("query") String query, @Query("token") String token);
+    Call<ModelStatusPlayers> getPlayers(@Query("query") String query, @Query("token") String token);
 
     //kick
     @GET("api.php")
-    Call<Model_unknown> getConsoleCmd(@Query("query") String query, @Query("cmd") String cmd, @Query("token") String token);;
+    Call<ModelConsoleCmd> getConsoleCmd(@Query("query") String query, @Query("cmd") String cmd, @Query("token") String token);
 
     //Start
     @GET("api.php")
-    Call<Model_unknown> getServerActions(@Query("query") String query, @Query("token") String token);
+    Call<ModelConsoleCmd> getServerActions(@Query("query") String query, @Query("token") String token);
+
+    //Start
+    @GET("api.php")
+    Call<ModelConsoleCmd> getServerActionsMap(@Query("query") String query, @Query("map") String map, @Query("token") String token);
 
 
 }

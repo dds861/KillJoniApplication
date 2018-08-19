@@ -67,7 +67,8 @@ public class Main3Activity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+                Snackbar.make(view, "Updated", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -162,6 +163,8 @@ public class Main3Activity extends AppCompatActivity {
 
                     return rootView2;
                 case 6:
+
+
                     View rootView3 = inflater.inflate(R.layout.fragment_players, container, false);
                     ActivityPlayers activityStatus3 = new ActivityPlayers(rootView3);
                     activityStatus3.getPlayersList();
@@ -171,7 +174,6 @@ public class Main3Activity extends AppCompatActivity {
                     View rootView4 = inflater.inflate(R.layout.fragment_message, container, false);
                     ActivityMessage activityMessage = new ActivityMessage(rootView4);
                     activityMessage.getPlayersList();
-
                     return rootView4;
                 default:
                     break;

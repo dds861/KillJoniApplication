@@ -1,5 +1,6 @@
 package com.chatserver.dd.chat.Retrofit;
 
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.chatserver.dd.chat.R;
@@ -7,24 +8,23 @@ import com.chatserver.dd.chat.R;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ConnectRetrofit {
+public class ConnectRetrofit extends AppCompatActivity {
 
     Retrofit retrofit = null;
     String url;
     APIService apiService;
-
     View view;
+
 
     public ConnectRetrofit(View view) {
         this.view = view;
     }
 
-   public APIService getApiService() {
+    public APIService getApiService() {
         //Setting the url
         url = view.getResources().getString(R.string.website);
         //Initializing Retrofit with building it
-        if (retrofit == null)
-        {
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(url)
                     .addConverterFactory(GsonConverterFactory.create())
@@ -34,12 +34,12 @@ public class ConnectRetrofit {
         apiService = retrofit.create(APIService.class);
         return apiService;
     }
-   public APIService getApiServiceStatus() {
+
+    public APIService getApiServiceMyarena() {
         //Setting the url
         url = view.getResources().getString(R.string.website2);
         //Initializing Retrofit with building it
-        if (retrofit == null)
-        {
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(url)
                     .addConverterFactory(GsonConverterFactory.create())

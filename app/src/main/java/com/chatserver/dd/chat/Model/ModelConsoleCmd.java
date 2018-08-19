@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by dds86 on 15-Oct-17.
  */
 
-public class Model_unknown {
+public class ModelConsoleCmd {
 
     @SerializedName("status")
     private String status;
