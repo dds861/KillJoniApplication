@@ -1,10 +1,10 @@
-package com.chatserver.dd.chat.Retrofit;
+package com.chatserver.dd.chat.Contract;
 
 
-import com.chatserver.dd.chat.Model.Model;
-import com.chatserver.dd.chat.Model.ModelAdminConnect;
-import com.chatserver.dd.chat.Model.ModelConsoleCmd;
-import com.chatserver.dd.chat.Model.ModelStatusPlayers;
+import com.chatserver.dd.chat.View.Model.ModelChat;
+import com.chatserver.dd.chat.View.Model.ModelAdminConnect;
+import com.chatserver.dd.chat.View.Model.ModelConsoleCmd;
+import com.chatserver.dd.chat.View.Model.ModelStatusPlayers;
 
 import java.util.List;
 
@@ -19,15 +19,15 @@ import retrofit2.http.Query;
 public interface APIService {
     //url for "All" Words
     @GET("hlstats_Events_AllWords.php")
-    Call<List<Model>> getAllWords();
+    Call<List<ModelChat>> getAllWords();
 
     //url for "Server" Words
     @GET("hlstats_Events_ServerWords.php")
-    Call<List<Model>> getServerWords();
+    Call<List<ModelChat>> getServerWords();
 
     //url for "Vip" Words
     @GET("hlstats_Events_VipWords.php")
-    Call<List<Model>> getVipWords();
+    Call<List<ModelChat>> getVipWords();
 
     //url for "AdminConnect" Words
     @GET("hlstats_Events_adminConnect.php")
@@ -49,10 +49,6 @@ public interface APIService {
     //Start
     @GET("api.php")
     Call<ModelConsoleCmd> getServerActions(@Query("query") String query, @Query("token") String token);
-
-    //Start
-    @GET("api.php")
-    Call<ModelConsoleCmd> getServerActionsMap(@Query("query") String query, @Query("map") String map, @Query("token") String token);
 
 
 }

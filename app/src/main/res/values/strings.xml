@@ -3,8 +3,7 @@
     <string name="button1Text" translatable="false">All Words</string>
     <string name="button2Text" translatable="false">Server Words</string>
     <string name="button3Text" translatable="false">Vip Words</string>
-    <string name="website">http://killjoniast.myarena.ru/android/</string>
-    <string name="website2">https://www.myarena.ru/</string>
+
     <string name="IpAddress">Server IP Address: 46.174.48.29:27202</string>
     <string name="button4Text">Admin Connect</string>
     <string name="title_activity_main2">Main2Activity</string>

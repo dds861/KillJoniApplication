@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.Model;
+package com.chatserver.dd.chat.View.Model;
 
 /**
  * Created by dd on 08.05.2017.

@@ -1,17 +1,17 @@
-package com.chatserver.dd.chat.Model;
+package com.chatserver.dd.chat.View.Model;
 
 /**
  * Created by dd on 03.05.2017.
  */
 
-public class Model {
+public class ModelChat {
     //Chat Variables
     private String eventTime;
     private String message;
     private String lastName;
 
     //Chat contructer
-    public Model(String eventTime, String message, String lastName) {
+    public ModelChat(String eventTime, String message, String lastName) {
         this.eventTime      = eventTime;
         this.message        = message;
         this.lastName       = lastName;

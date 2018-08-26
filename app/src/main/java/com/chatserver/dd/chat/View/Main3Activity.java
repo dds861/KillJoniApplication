@@ -1,8 +1,6 @@
-package com.chatserver.dd.chat;
+package com.chatserver.dd.chat.View;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -18,13 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.chatserver.dd.chat.Activity.ActivityAdminConnect;
-import com.chatserver.dd.chat.Activity.ActivityAllWords;
-import com.chatserver.dd.chat.Activity.ActivityMessage;
-import com.chatserver.dd.chat.Activity.ActivityPlayers;
-import com.chatserver.dd.chat.Activity.ActivityServerWords;
-import com.chatserver.dd.chat.Activity.ActivityStatus;
-import com.chatserver.dd.chat.Activity.ActivityVipWords;
+import com.chatserver.dd.chat.Model.MyarenaToken;
+import com.chatserver.dd.chat.Presenter.MainView;
+import com.chatserver.dd.chat.R;
 
 public class Main3Activity extends AppCompatActivity {
 
@@ -74,11 +68,8 @@ public class Main3Activity extends AppCompatActivity {
         });
 
         //saving token to memory
-        String token = getString(R.string.token);
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("token", token);
-        editor.commit();
+        MyarenaToken myarenaToken = new MyarenaToken(getApplicationContext());
+        myarenaToken.setToken();
 
     }
 
@@ -134,52 +125,12 @@ public class Main3Activity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_others, container, false);
 
+            MainView mainActivity = new MainView();
+            int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
+            View view = mainActivity.getMainView(inflater, container, sectionNumber);
 
-//            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
-                case 1:
-                    ActivityAllWords activityAllWords = new ActivityAllWords(rootView);
-                    activityAllWords.getUserList();
-                    return rootView;
-                case 2:
-                    ActivityServerWords serverWords = new ActivityServerWords(rootView);
-                    serverWords.getUserList();
-                    return rootView;
-                case 3:
-                    ActivityVipWords vipWords2 = new ActivityVipWords(rootView);
-                    vipWords2.getUserList();
-                    return rootView;
-                case 4:
-                    ActivityAdminConnect adminConnect2 = new ActivityAdminConnect(rootView);
-                    adminConnect2.getUserList();
-                    return rootView;
-                case 5:
-                    View rootView2 = inflater.inflate(R.layout.fragment_status, container, false);
-                    ActivityStatus activityStatus2 = new ActivityStatus(rootView2);
-                    activityStatus2.getUserList();
-
-                    return rootView2;
-                case 6:
-
-
-                    View rootView3 = inflater.inflate(R.layout.fragment_players, container, false);
-                    ActivityPlayers activityStatus3 = new ActivityPlayers(rootView3);
-                    activityStatus3.getPlayersList();
-
-                    return rootView3;
-                case 7:
-                    View rootView4 = inflater.inflate(R.layout.fragment_message, container, false);
-                    ActivityMessage activityMessage = new ActivityMessage(rootView4);
-                    activityMessage.getPlayersList();
-                    return rootView4;
-                default:
-                    break;
-            }
-
-            return null;
+            return view;
         }
 
 

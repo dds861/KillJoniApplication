@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.Model;
+package com.chatserver.dd.chat.View.Model;
 
 import com.google.gson.annotations.SerializedName;
 
