@@ -1,94 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/edMessage"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="4dp"
-        android:hint="Enter Message here"
+        android:layout_height="match_parent">
 
-        />
-
-    <Button
-        android:id="@+id/btn_sendMessage"
-        android:text="send"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edMessage" />
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/carViewSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_sendMessage"
-        android:layout_margin="8dp">
-
-
-        <Spinner
-            android:id="@+id/spinner"
+        <EditText
+            android:id="@+id/edMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="4dp"
+            android:hint="Enter Message here"
 
             />
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.RecyclerView
 
-        android:id="@+id/recyclerViewMessagePlayers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/carViewSpinner" />
-
-    <RadioGroup
-        android:id="@+id/rbgMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <RadioButton
-            android:id="@+id/rbMessageAllPlayers"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            android:id="@+id/carViewRadio"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="AllPlayers" />
+            android:layout_below="@id/edMessage"
+            android:layout_margin="8dp">
 
-        <RadioButton
-            android:id="@+id/rbMessageAllAdmins"
-            android:layout_width="wrap_content"
+
+            <RadioGroup
+                android:id="@+id/rbgMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbMessageAllPlayers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="AllPlayers" />
+
+                <RadioButton
+                    android:id="@+id/rbMessageAllAdmins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="AllAdmins" />
+
+                <RadioButton
+                    android:id="@+id/rbMessagePrivate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Private (select Player)" />
+
+                <RadioButton
+                    android:id="@+id/rbMessageAllHudLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="AllHudLeft" />
+
+                <RadioButton
+                    android:id="@+id/rbMessageAllHudCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="AllHudCenter" />
+
+
+            </RadioGroup>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewMessagePlayers"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="AllAdmins" />
-
-        <RadioButton
-            android:id="@+id/rbMessagePrivate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="Private (select Player)" />
-
-        <RadioButton
-            android:id="@+id/rbMessageAllHudLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="AllHudLeft" />
-
-        <RadioButton
-            android:id="@+id/rbMessageAllHudCenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:text="AllHudCenter" />
+            android:layout_below="@id/carViewRadio" />
 
 
-    </RadioGroup>
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</layout>

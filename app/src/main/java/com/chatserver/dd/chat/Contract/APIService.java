@@ -1,10 +1,13 @@
 package com.chatserver.dd.chat.Contract;
 
 
-import com.chatserver.dd.chat.View.Model.ModelChat;
-import com.chatserver.dd.chat.View.Model.ModelAdminConnect;
-import com.chatserver.dd.chat.View.Model.ModelConsoleCmd;
-import com.chatserver.dd.chat.View.Model.ModelStatusPlayers;
+import com.chatserver.dd.chat.Admins.View.UsersAdmins;
+import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
+import com.chatserver.dd.chat.Message.Model.ViewMessageNetwork;
+import com.chatserver.dd.chat.Players.View.ViewStatusPlayers;
+import com.chatserver.dd.chat.Server.View.UsersServer;
+import com.chatserver.dd.chat.Status.View.ViewConsoleCmd;
+import com.chatserver.dd.chat.Vip.View.UsersVip;
 
 import java.util.List;
 
@@ -19,36 +22,40 @@ import retrofit2.http.Query;
 public interface APIService {
     //url for "All" Words
     @GET("hlstats_Events_AllWords.php")
-    Call<List<ModelChat>> getAllWords();
+    Call<List<UsersAllWords>> getAllWords();
 
     //url for "Server" Words
     @GET("hlstats_Events_ServerWords.php")
-    Call<List<ModelChat>> getServerWords();
+    Call<List<UsersServer>> getServerWords();
 
     //url for "Vip" Words
     @GET("hlstats_Events_VipWords.php")
-    Call<List<ModelChat>> getVipWords();
+    Call<List<UsersVip>> getVipWords();
 
     //url for "AdminConnect" Words
     @GET("hlstats_Events_adminConnect.php")
-    Call<List<ModelAdminConnect>> getAdminConnect();
+    Call<List<UsersAdmins>> getAdminConnect();
 
 
     //url for myarena Status
     @GET("api.php")
-    Call<ModelStatusPlayers> getUserData(@Query("query") String query, @Query("token") String token);
+    Call<ViewStatusPlayers> getUserData(@Query("query") String query, @Query("token") String token);
 
     //url for myarena Status
     @GET("api.php")
-    Call<ModelStatusPlayers> getPlayers(@Query("query") String query, @Query("token") String token);
+    Call<ViewStatusPlayers> getPlayers(@Query("query") String query, @Query("token") String token);
+
+    //url for myarena ViewMessage
+    @GET("api.php")
+    Call<List<ViewMessageNetwork.P>> getPlayers2(@Query("query") String query, @Query("token") String token);
 
     //kick
     @GET("api.php")
-    Call<ModelConsoleCmd> getConsoleCmd(@Query("query") String query, @Query("cmd") String cmd, @Query("token") String token);
+    Call<ViewConsoleCmd> getConsoleCmd(@Query("query") String query, @Query("cmd") String cmd, @Query("token") String token);
 
     //Start
     @GET("api.php")
-    Call<ModelConsoleCmd> getServerActions(@Query("query") String query, @Query("token") String token);
+    Call<ViewConsoleCmd> getServerActions(@Query("query") String query, @Query("token") String token);
 
 
 }

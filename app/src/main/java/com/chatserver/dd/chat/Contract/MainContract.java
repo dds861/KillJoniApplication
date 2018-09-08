@@ -3,9 +3,19 @@ package com.chatserver.dd.chat.Contract;
 public interface MainContract {
 
     interface View {
+
+
     }
 
     interface Presenter {
+
+        interface RepositoriesListPresenterPlayers {
+
+            void onItemInteraction(int adapterPosition, String namePlayer);
+        }
+
+
+
     }
 
     interface Model {
@@ -29,16 +39,20 @@ public interface MainContract {
 
         interface RepositoryRowViewPlayers {
 
-            public void setTv_PlayerPid(int tv_PlayerPid);
+            void setTv_PlayerPid(int tv_PlayerPid);
 
-            public void setTv_PlayerName(String tv_PlayerName);
+            void setTv_PlayerName(String tv_PlayerName);
 
-            public void setTv_PlayerScore(int tv_PlayerScore);
+            void setTv_PlayerScore(int tv_PlayerScore);
 
-            public void setTv_PlayerTime(String tv_PlayerTime);
+            void setTv_PlayerTime(String tv_PlayerTime);
 
-            public void setCheckBox_player_select(String checkBox_player_select);
+            void setCheckBox_player_select(String checkBox_player_select);
+
+
         }
+
+
 
         interface RepositoryRowViewStatus {
 

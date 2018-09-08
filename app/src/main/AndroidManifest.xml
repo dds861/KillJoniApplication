@@ -12,16 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".View.Main3Activity"
+            android:name=".Mvp.View.Main2Activity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AllWords.View.ActivityAllWords" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
+        <activity android:name=".Server.View.ActivityServer" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
+        <activity android:name=".Vip.View.ActivityVip" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
+        <activity android:name=".Admins.View.ActivityAdmins" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
     </application>
 
 </manifest>
