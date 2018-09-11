@@ -43,21 +43,21 @@ public class CmdMain {
 //                case R.id.rbPlayersGag:
 //                    cmdCommand = "gag " + playerName1;
 //                    break;
-                case R.id.rbMessageAllPlayers:
-                    cmdCommand = "amx_say " + edMessage.getText().toString();
-                    break;
-                case R.id.rbMessageAllAdmins:
-                    cmdCommand = "amx_chat " + edMessage.getText().toString();
-                    break;
-                case R.id.rbMessagePrivate:
-                    cmdCommand = "amx_psay " + playerName1 + " " + edMessage.getText().toString();
-                    break;
-                case R.id.rbMessageAllHudLeft:
-                    cmdCommand = "amx_tsay green " + edMessage.getText().toString();
-                    break;
-                case R.id.rbMessageAllHudCenter:
-                    cmdCommand = "amx_csay green " + edMessage.getText().toString();
-                    break;
+//                case R.id.rbMessageAllPlayers:
+//                    cmdCommand = "amx_say " + edMessage.getText().toString();
+//                    break;
+//                case R.id.rbMessageAllAdmins:
+//                    cmdCommand = "amx_chat " + edMessage.getText().toString();
+//                    break;
+//                case R.id.rbMessagePrivate:
+//                    cmdCommand = "amx_psay " + playerName1 + " " + edMessage.getText().toString();
+//                    break;
+//                case R.id.rbMessageAllHudLeft:
+//                    cmdCommand = "amx_tsay green " + edMessage.getText().toString();
+//                    break;
+//                case R.id.rbMessageAllHudCenter:
+//                    cmdCommand = "amx_csay green " + edMessage.getText().toString();
+//                    break;
 
                 default:
                     Toast.makeText(context, "Select action", Toast.LENGTH_SHORT).show();
