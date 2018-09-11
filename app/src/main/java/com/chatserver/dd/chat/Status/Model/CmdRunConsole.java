@@ -7,7 +7,7 @@ import android.widget.Toast;
 import com.chatserver.dd.chat.Contract.APIService;
 import com.chatserver.dd.chat.Mvp.Model.ConnectRetrofit;
 import com.chatserver.dd.chat.Mvp.Model.MyarenaToken;
-import com.chatserver.dd.chat.Status.View.ViewConsoleCmd;
+import com.chatserver.dd.chat.Cmd.View.ViewConsoleCmd;
 
 import retrofit2.Call;
 import retrofit2.Callback;

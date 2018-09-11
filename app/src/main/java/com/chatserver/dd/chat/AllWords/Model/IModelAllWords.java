@@ -11,4 +11,6 @@ public interface IModelAllWords {
         void onFinished(List<UsersAllWords> arrayList);
         void onFailure(Throwable t);
     }
+
+
 }

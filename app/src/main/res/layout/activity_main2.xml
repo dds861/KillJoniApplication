@@ -36,25 +36,32 @@
         android:text="@string/tab_text_4" />
 
     <Button
-        android:id="@+id/btn_Status"
+        android:id="@+id/btn_Cmd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/tab_text_5" />
+        android:text="CMD" />
 
-    <Button
-        android:id="@+id/btn_Players"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/tab_text_6" />
+    <!--<Button-->
+        <!--android:id="@+id/btn_Status"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/tab_text_5" />-->
 
-    <Button
-        android:id="@+id/btn_Message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/tab_text_7" />
+    <!--<Button-->
+        <!--android:id="@+id/btn_Players"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/tab_text_6" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_Message"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/tab_text_7" />-->
 
 
 </LinearLayout>

@@ -26,21 +26,7 @@ public class ActivityAllWords extends AppCompatActivity implements IViewAllWords
         presenterAllWords = new PresenterAllWords(this,new ModelAllWords());
         presenterAllWords.requestDataFromServer();
 
-        getUserList();
     }
-
-    private void getUserList() {
-
-    }
-
-    RecyclerItemClickListenerAllWords recyclerItemClickListener = new RecyclerItemClickListenerAllWords() {
-        @Override
-        public void onItemClick(UsersAllWords usersAllWords) {
-            Toast.makeText(ActivityAllWords.this,
-                    "Message:  " + usersAllWords.getMessage(),
-                    Toast.LENGTH_LONG).show();
-        }
-    };
 
     private void initView() {
 
@@ -52,7 +38,7 @@ public class ActivityAllWords extends AppCompatActivity implements IViewAllWords
     public void setDataToRecyclerView(List<UsersAllWords> userList) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(ActivityAllWords.this);
         mRecyclerViewMain.setLayoutManager(layoutManager);
-        AdapterAllWords recyclerViewAdapter = new AdapterAllWords(userList,recyclerItemClickListener);
+        AdapterAllWords recyclerViewAdapter = new AdapterAllWords(userList);
         mRecyclerViewMain.setAdapter(recyclerViewAdapter);
     }
 

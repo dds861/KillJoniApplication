@@ -37,12 +37,12 @@ public class CmdMain {
                 case R.id.rbPlayersSlay:
                     cmdCommand = "amx_slay " + playerName1;
                     break;
-                case R.id.rbPlayersBan:
-                    cmdCommand = "amx_ban 10 " + playerName1 + " banned";
-                    break;
-                case R.id.rbPlayersGag:
-                    cmdCommand = "gag " + playerName1;
-                    break;
+//                case R.id.rbPlayersBan:
+//                    cmdCommand = "amx_ban 10 " + playerName1 + " banned";
+//                    break;
+//                case R.id.rbPlayersGag:
+//                    cmdCommand = "gag " + playerName1;
+//                    break;
                 case R.id.rbMessageAllPlayers:
                     cmdCommand = "amx_say " + edMessage.getText().toString();
                     break;

@@ -21,10 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AllWords.View.ActivityAllWords" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
-        <activity android:name=".Server.View.ActivityServer" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
-        <activity android:name=".Vip.View.ActivityVip" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
-        <activity android:name=".Admins.View.ActivityAdmins" android:parentActivityName=".Mvp.View.Main2Activity"></activity>
+        <activity
+            android:name=".AllWords.View.ActivityAllWords"
+            android:parentActivityName=".Mvp.View.Main2Activity"/>
+        <activity
+            android:name=".Server.View.ActivityServer"
+            android:parentActivityName=".Mvp.View.Main2Activity"/>
+        <activity
+            android:name=".Vip.View.ActivityVip"
+            android:parentActivityName=".Mvp.View.Main2Activity"/>
+        <activity
+            android:name=".Admins.View.ActivityAdmins"
+            android:parentActivityName=".Mvp.View.Main2Activity"/>
+        <activity
+            android:name=".Cmd.View.ActivityCmd"
+            android:parentActivityName=".Mvp.View.Main2Activity"/>
     </application>
 
 </manifest>

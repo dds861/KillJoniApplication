@@ -1,7 +1,7 @@
 package com.chatserver.dd.chat.Status.Presenter;
 
 import com.chatserver.dd.chat.Contract.MainContract;
-import com.chatserver.dd.chat.Players.View.ViewStatusPlayers;
+import com.chatserver.dd.chat.Cmd.View.ViewStatusPlayers;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

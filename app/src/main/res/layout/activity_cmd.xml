@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fl_btn_cmd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="24dp"
+
+        android:clickable="true"
+        android:src="@android:drawable/stat_notify_sync_noanim" />
+
+
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/cv_cmd_commands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cv_edittext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+
+                android:id="@+id/rb_groupPlayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <!--<GridLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:columnCount="3"-->
+                <!--android:rowCount="3">-->
+
+                <RadioButton
+                    android:id="@+id/rbPlayersKick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kick" />
+
+                <RadioButton
+                    android:id="@+id/rbPlayersSlap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slap" />
+
+                <RadioButton
+                    android:id="@+id/rbPlayersSlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slay" />
+
+                <RadioButton
+                    android:id="@+id/rb_amx_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amx_chat" />
+
+                <RadioButton
+                    android:id="@+id/rb_amx_psay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amx_psay" />
+
+                <RadioButton
+                    android:id="@+id/rb_amx_say"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="amx_say" />
+
+                <RadioButton
+                android:id="@+id/rbPlayersBan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ban" />
+
+                <RadioButton
+                android:id="@+id/rbPlayersGag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gag" />
+
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/rbPlayersAmxNick"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:text="amx_nick" />-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/rbPlayersAmxMap"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="amx_map" />-->
+
+                <!--<RadioButton-->
+                <!--android:id="@+id/rbPlayersAmxRcon"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:text="amx_rcon" />-->
+
+                <RadioButton
+                android:id="@+id/rb_amx_setfrags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="amx_setfrags" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_send"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/etTextCommands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@id/btn_clear_edittext"
+                android:gravity="center"
+                android:hint="text"
+                android:lines="2"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_clear_edittext"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|center_vertical"
+                android:text="x" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/fl_btn_cmd"
+        android:padding="32dp"
+        android:text="send" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_players_top_bars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/cv_edittext"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/cv_cmd_commands"
+        android:layout_toRightOf="@id/cv_cmd_commands"
+        app:cardCornerRadius="5dp">
+
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/recyclerViewPlayers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

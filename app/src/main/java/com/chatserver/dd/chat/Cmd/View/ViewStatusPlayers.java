@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.Message.Model;
+package com.chatserver.dd.chat.Cmd.View;
 
 /**
  * Created by dd on 08.05.2017.
@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ViewMessageNetwork {
+public class ViewStatusPlayers {
     @SerializedName("status")
     private String status;
     @SerializedName("online")

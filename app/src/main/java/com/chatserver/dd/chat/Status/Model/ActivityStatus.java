@@ -14,7 +14,7 @@ import com.chatserver.dd.chat.Status.Presenter.CmdMain;
 import com.chatserver.dd.chat.Status.Presenter.RepositoriesListPresenterStatus;
 import com.chatserver.dd.chat.R;
 import com.chatserver.dd.chat.Status.View.RecyclerAdapterStatus;
-import com.chatserver.dd.chat.Players.View.ViewStatusPlayers;
+import com.chatserver.dd.chat.Cmd.View.ViewStatusPlayers;
 
 import retrofit2.Call;
 import retrofit2.Callback;

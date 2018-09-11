@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.chatserver.dd.chat.Admins.View.ActivityAdmins;
 import com.chatserver.dd.chat.AllWords.View.ActivityAllWords;
+import com.chatserver.dd.chat.Cmd.View.ActivityCmd;
 import com.chatserver.dd.chat.R;
 import com.chatserver.dd.chat.Server.View.ActivityServer;
 import com.chatserver.dd.chat.Vip.View.ActivityVip;
@@ -21,6 +22,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     private Button mStatusBtn;
     private Button mPlayersBtn;
     private Button mMessageBtn;
+    private Button mCmdBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +42,14 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         mVipBtn.setOnClickListener(this);
         mAdminsBtn = (Button) findViewById(R.id.btn_Admins);
         mAdminsBtn.setOnClickListener(this);
-        mStatusBtn = (Button) findViewById(R.id.btn_Status);
-        mStatusBtn.setOnClickListener(this);
-        mPlayersBtn = (Button) findViewById(R.id.btn_Players);
-        mPlayersBtn.setOnClickListener(this);
-        mMessageBtn = (Button) findViewById(R.id.btn_Message);
-        mMessageBtn.setOnClickListener(this);
+//        mStatusBtn = (Button) findViewById(R.id.btn_Status);
+//        mStatusBtn.setOnClickListener(this);
+//        mPlayersBtn = (Button) findViewById(R.id.btn_Players);
+//        mPlayersBtn.setOnClickListener(this);
+//        mMessageBtn = (Button) findViewById(R.id.btn_Message);
+//        mMessageBtn.setOnClickListener(this);
+        mCmdBtn = (Button) findViewById(R.id.btn_Cmd);
+        mCmdBtn.setOnClickListener(this);
     }
 
     @Override
@@ -59,7 +63,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btn_Server:
                 // TODO 18/09/06
-                 intent = new Intent(getApplicationContext(), ActivityServer.class);
+                intent = new Intent(getApplicationContext(), ActivityServer.class);
                 startActivity(intent);
                 break;
             case R.id.btn_Vip:
@@ -72,14 +76,18 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 intent = new Intent(getApplicationContext(), ActivityAdmins.class);
                 startActivity(intent);
                 break;
-            case R.id.btn_Status:
-                // TODO 18/09/06
-                break;
-            case R.id.btn_Players:
-                // TODO 18/09/06
-                break;
-            case R.id.btn_Message:
-                // TODO 18/09/06
+//            case R.id.btn_Status:
+//                 TODO 18/09/06
+//                break;
+//            case R.id.btn_Players:
+//                 TODO 18/09/06
+//                break;
+//            case R.id.btn_Message:
+//                 TODO 18/09/06
+//                break;
+            case R.id.btn_Cmd:// TODO 18/09/10
+                intent = new Intent(getApplicationContext(), ActivityCmd.class);
+                startActivity(intent);
                 break;
             default:
                 break;

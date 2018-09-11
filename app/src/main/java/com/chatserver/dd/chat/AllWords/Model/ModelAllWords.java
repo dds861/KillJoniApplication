@@ -4,6 +4,7 @@ package com.chatserver.dd.chat.AllWords.Model;
 import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
 import com.chatserver.dd.chat.Contract.APIService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -54,6 +55,8 @@ public class ModelAllWords implements IModelAllWords {
 
 
     }
+
+
 
 
 }

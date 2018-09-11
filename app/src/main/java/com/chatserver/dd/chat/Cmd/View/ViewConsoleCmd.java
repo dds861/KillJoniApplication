@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.Status.View;
+package com.chatserver.dd.chat.Cmd.View;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -3,10 +3,9 @@ package com.chatserver.dd.chat.Contract;
 
 import com.chatserver.dd.chat.Admins.View.UsersAdmins;
 import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
-import com.chatserver.dd.chat.Message.Model.ViewMessageNetwork;
-import com.chatserver.dd.chat.Players.View.ViewStatusPlayers;
+import com.chatserver.dd.chat.Cmd.View.ViewConsoleCmd;
+import com.chatserver.dd.chat.Cmd.View.ViewStatusPlayers;
 import com.chatserver.dd.chat.Server.View.UsersServer;
-import com.chatserver.dd.chat.Status.View.ViewConsoleCmd;
 import com.chatserver.dd.chat.Vip.View.UsersVip;
 
 import java.util.List;
@@ -41,13 +40,9 @@ public interface APIService {
     @GET("api.php")
     Call<ViewStatusPlayers> getUserData(@Query("query") String query, @Query("token") String token);
 
-    //url for myarena Status
-    @GET("api.php")
-    Call<ViewStatusPlayers> getPlayers(@Query("query") String query, @Query("token") String token);
-
     //url for myarena ViewMessage
     @GET("api.php")
-    Call<List<ViewMessageNetwork.P>> getPlayers2(@Query("query") String query, @Query("token") String token);
+    Call<ViewStatusPlayers> getPlayers2(@Query("query") String query, @Query("token") String token);
 
     //kick
     @GET("api.php")

@@ -32,6 +32,7 @@ public class PresenterAllWords implements IPresenterAllWords, IModelAllWords.OnF
 
     }
 
+
     @Override
     public void onFinished(List<UsersAllWords> arrayList) {
 
@@ -42,4 +43,6 @@ public class PresenterAllWords implements IPresenterAllWords, IModelAllWords.OnF
     public void onFailure(Throwable t) {
         iViewAllWords.onResponseFailure(t);
     }
+
+
 }
