@@ -32,105 +32,118 @@
         android:layout_marginTop="5dp"
         app:cardCornerRadius="5dp">
 
-        <LinearLayout
-
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <RadioGroup
+            <LinearLayout
 
-                android:id="@+id/rb_groupPlayers"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="4dp"
                 android:orientation="vertical">
 
-                <!--<GridLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:columnCount="3"-->
-                <!--android:rowCount="3">-->
+                <RadioGroup
 
-                <RadioButton
-                    android:id="@+id/rbPlayersKick"
+                    android:id="@+id/rb_groupPlayers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/kick" />
+                    android:layout_marginRight="4dp"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/rbPlayersSlap"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/slap" />
+                    <!--<GridLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:columnCount="3"-->
+                    <!--android:rowCount="3">-->
 
-                <RadioButton
-                    android:id="@+id/rbPlayersSlay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/slay" />
+                    <RadioButton
+                        android:id="@+id/rbPlayersKick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kick" />
 
-                <RadioButton
-                    android:id="@+id/rb_amx_chat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="amx_chat" />
+                    <RadioButton
+                        android:id="@+id/rbPlayersSlap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slap" />
 
-                <RadioButton
-                    android:id="@+id/rb_amx_psay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="amx_psay" />
+                    <RadioButton
+                        android:id="@+id/rbPlayersSlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slay" />
 
-                <RadioButton
-                    android:id="@+id/rb_amx_say"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="amx_say" />
+                    <RadioButton
+                        android:id="@+id/rb_amx_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="amx_chat" />
 
-                <RadioButton
-                android:id="@+id/rbPlayersBan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ban" />
+                    <RadioButton
+                        android:id="@+id/rb_amx_psay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="amx_psay" />
 
-                <RadioButton
-                android:id="@+id/rbPlayersGag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/gag" />
+                    <RadioButton
+                        android:id="@+id/rb_amx_say"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="amx_say" />
+
+                    <RadioButton
+                        android:id="@+id/rbPlayersBan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ban" />
+
+                    <RadioButton
+                        android:id="@+id/rb_amx_banip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="amx_banip" />
+
+                    <RadioButton
+                        android:id="@+id/rbPlayersGag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/gag" />
+
+                    <RadioButton
+                        android:id="@+id/rb_amx_setfrags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="amx_setfrags" />
+
+                    <RadioButton
+                        android:id="@+id/rb_amx_setdeaths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="amx_setdeaths" />
+
+                    <RadioButton
+                        android:id="@+id/rb_amx_reloadadmins"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="amx_reloadadmins" />
+                    <RadioButton
+                        android:id="@+id/rb_amx_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="amx_nick" />
 
 
-                <!--<RadioButton-->
-                <!--android:id="@+id/rbPlayersAmxNick"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="8dp"-->
-                <!--android:text="amx_nick" />-->
-
-                <!--<RadioButton-->
-                <!--android:id="@+id/rbPlayersAmxMap"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="amx_map" />-->
-
-                <!--<RadioButton-->
-                <!--android:id="@+id/rbPlayersAmxRcon"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="8dp"-->
-                <!--android:text="amx_rcon" />-->
-
-                <RadioButton
-                android:id="@+id/rb_amx_setfrags"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="amx_setfrags" />
-            </RadioGroup>
+                </RadioGroup>
 
 
-        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView

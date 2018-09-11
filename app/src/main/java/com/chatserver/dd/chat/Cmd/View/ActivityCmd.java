@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.chatserver.dd.chat.Cmd.Model.ModelCmd;
@@ -36,6 +37,14 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
     private Button mClearEdittextBtn;
     private CardView mEdittextCv;
     private CardView mPlayersTopBarsCv;
+    private RadioButton mRbPlayersBan;
+    private RadioButton mAmxBanipRb;
+    private RadioButton mRbPlayersGag;
+    private RadioButton mAmxSetfragsRb;
+    private RadioButton mAmxSetdeathsRb;
+    private RadioButton mAmxReloadadminsRb;
+    private RadioButton mAmxNickRb;
+    private RelativeLayout mEdittextRelativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +70,13 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
         mAmxPsayRb = (RadioButton) findViewById(R.id.rb_amx_psay);
         mAmxSayRb = (RadioButton) findViewById(R.id.rb_amx_say);
         mEtTextCommands = (EditText) findViewById(R.id.etTextCommands);
-
+        mRbPlayersBan = (RadioButton) findViewById(R.id.rbPlayersBan);
+        mAmxBanipRb = (RadioButton) findViewById(R.id.rb_amx_banip);
+        mRbPlayersGag = (RadioButton) findViewById(R.id.rbPlayersGag);
+        mAmxSetfragsRb = (RadioButton) findViewById(R.id.rb_amx_setfrags);
+        mAmxSetdeathsRb = (RadioButton) findViewById(R.id.rb_amx_setdeaths);
+        mAmxReloadadminsRb = (RadioButton) findViewById(R.id.rb_amx_reloadadmins);
+        mAmxNickRb = (RadioButton) findViewById(R.id.rb_amx_nick);
 
         radioGroup = (RadioGroup) findViewById(R.id.rb_groupPlayers);
         radioGroup.setOnCheckedChangeListener(this);
@@ -74,6 +89,14 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
 
         mClearEdittextBtn = (Button) findViewById(R.id.btn_clear_edittext);
         mClearEdittextBtn.setOnClickListener(this);
+
+        //не нужные можно удалить
+        mEdittextRelativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout_edittext);
+        mCmdCommandsCv = (CardView) findViewById(R.id.cv_cmd_commands);
+        mEdittextCv = (CardView) findViewById(R.id.cv_edittext);
+        mPlayersTopBarsCv = (CardView) findViewById(R.id.cv_players_top_bars);
+
+
     }
 
     @Override

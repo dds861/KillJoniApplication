@@ -42,14 +42,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         mVipBtn.setOnClickListener(this);
         mAdminsBtn = (Button) findViewById(R.id.btn_Admins);
         mAdminsBtn.setOnClickListener(this);
-//        mStatusBtn = (Button) findViewById(R.id.btn_Status);
-//        mStatusBtn.setOnClickListener(this);
-//        mPlayersBtn = (Button) findViewById(R.id.btn_Players);
-//        mPlayersBtn.setOnClickListener(this);
-//        mMessageBtn = (Button) findViewById(R.id.btn_Message);
-//        mMessageBtn.setOnClickListener(this);
         mCmdBtn = (Button) findViewById(R.id.btn_Cmd);
         mCmdBtn.setOnClickListener(this);
+
     }
 
     @Override
