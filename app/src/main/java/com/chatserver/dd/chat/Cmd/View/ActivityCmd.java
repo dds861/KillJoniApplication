@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,14 @@ import android.widget.Toast;
 import com.chatserver.dd.chat.Cmd.Model.ModelCmd;
 import com.chatserver.dd.chat.Cmd.Presenter.PresenterCmd;
 import com.chatserver.dd.chat.R;
+
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
 
 public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnClickListener, RadioGroup.OnCheckedChangeListener {
 
@@ -45,6 +54,7 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
     private RadioButton mAmxReloadadminsRb;
     private RadioButton mAmxNickRb;
     private RelativeLayout mEdittextRelativeLayout;
+    private Disposable subscription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +63,33 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
         initView();
 
         presenterCmd = new PresenterCmd(this, new ModelCmd());
-        presenterCmd.requestDataFromServer();
+
+
+
+        onStartListenInputs();
 
 
     }
 
+    private void onStartListenInputs() {
+        subscription = Observable.interval(1000, 30000, TimeUnit.MILLISECONDS)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) {
+                        Log.i("autolog", "aLong: " + aLong);
+                        presenterCmd.requestDataFromServer();
+
+                    }
+                });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        subscription.dispose();
+    }
 
     private void initView() {
 
