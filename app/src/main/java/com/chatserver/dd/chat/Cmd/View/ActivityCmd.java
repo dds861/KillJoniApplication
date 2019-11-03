@@ -1,6 +1,7 @@
 package com.chatserver.dd.chat.Cmd.View;
 
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -10,9 +11,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chatserver.dd.chat.Cmd.Model.ModelCmd;
@@ -45,7 +48,7 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
     private CardView mCmdCommandsCv;
     private Button mClearEdittextBtn;
     private CardView mEdittextCv;
-    private CardView mPlayersTopBarsCv;
+    private ConstraintLayout mPlayersTopBarsCv;
     private RadioButton mRbPlayersBan;
     private RadioButton mAmxBanipRb;
     private RadioButton mRbPlayersGag;
@@ -55,6 +58,8 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
     private RadioButton mAmxNickRb;
     private RelativeLayout mEdittextRelativeLayout;
     private Disposable subscription;
+    private ProgressBar mProgressBar;
+    private TextView mListIsEmptyTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +68,6 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
         initView();
 
         presenterCmd = new PresenterCmd(this, new ModelCmd());
-
 
 
         onStartListenInputs();
@@ -93,7 +97,7 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
 
     private void initView() {
 
-        mRecyclerViewMain = (RecyclerView) findViewById(R.id.recyclerViewPlayers);
+        mRecyclerViewMain = (RecyclerView) findViewById(R.id.recycler_view_players);
         mRbPlayersKick = (RadioButton) findViewById(R.id.rbPlayersKick);
         mRbPlayersSlap = (RadioButton) findViewById(R.id.rbPlayersSlap);
         mRbPlayersSlay = (RadioButton) findViewById(R.id.rbPlayersSlay);
@@ -126,9 +130,11 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
         mEdittextRelativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout_edittext);
         mCmdCommandsCv = (CardView) findViewById(R.id.cv_cmd_commands);
         mEdittextCv = (CardView) findViewById(R.id.cv_edittext);
-        mPlayersTopBarsCv = (CardView) findViewById(R.id.cv_players_top_bars);
+        mPlayersTopBarsCv = findViewById(R.id.cv_players_top_bars);
 
 
+        mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        mListIsEmptyTv = (TextView) findViewById(R.id.tv_list_is_empty);
     }
 
     @Override
@@ -185,5 +191,24 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
         presenterCmd.onSetCmdToEditText(playerName);
     }
 
+    @Override
+    public void showProgressBar() {
+        mProgressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideProgressBar() {
+        mProgressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void listIsEmpty() {
+        mListIsEmptyTv.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void listIsNotEmpty() {
+        mListIsEmptyTv.setVisibility(View.GONE);
+    }
 
 }

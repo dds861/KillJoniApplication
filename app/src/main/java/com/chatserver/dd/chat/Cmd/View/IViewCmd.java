@@ -7,4 +7,12 @@ public interface IViewCmd {
     void setEdittext(String playerName);
     String getEdittext();
     void showToast(String text);
+
+    void showProgressBar();
+
+    void hideProgressBar();
+
+    void listIsEmpty();
+
+    void listIsNotEmpty();
 }

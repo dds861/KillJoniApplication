@@ -18,6 +18,7 @@ public class PresenterCmd implements IPresenterCmd, IModelCmd.OnFinishedListener
 
     @Override
     public void requestDataFromServer() {
+        iViewCmd.showProgressBar();
         iModelCmd.getPlayersList(this);
     }
 
@@ -70,6 +71,13 @@ public class PresenterCmd implements IPresenterCmd, IModelCmd.OnFinishedListener
     public void onFinishedPlayers(ViewStatusPlayers viewStatusPlayers) {
 
         iViewCmd.setDataToRecyclerView(viewStatusPlayers);
+
+        iViewCmd.hideProgressBar();
+        if (viewStatusPlayers.getData().getP().size() > 0) {
+            iViewCmd.listIsNotEmpty();
+        } else {
+            iViewCmd.listIsEmpty();
+        }
     }
 
     @Override

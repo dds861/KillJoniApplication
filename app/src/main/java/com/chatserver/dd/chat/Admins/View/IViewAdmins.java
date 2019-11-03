@@ -6,4 +6,8 @@ public interface IViewAdmins {
 
     void setDataToRecyclerView(List<UsersAdmins> userList);
     void onResponseFailure(Throwable throwable);
+
+    void showProgressBar();
+
+    void hideProgressBar();
 }

@@ -25,4 +25,5 @@
     <string name="slap">amx_slap</string>
     <string name="kick">amx_kick</string>
     <string name="token">2e5dcefb0c72d69ead8c2c1d0a2ba358</string>
+    <string name="list_is_empty">List is Empty</string>
 </resources>

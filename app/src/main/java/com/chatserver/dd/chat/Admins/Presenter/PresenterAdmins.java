@@ -10,25 +10,26 @@ import java.util.List;
 public class PresenterAdmins implements IPresenterAdmins, IModelAdmins.OnFinishedListener {
 
 
-    IViewAdmins iViewAllWords;
-    IModelAdmins iModelAllWords;
+    IViewAdmins view;
+    IModelAdmins iModelAdmins;
 
     public PresenterAdmins(IViewAdmins iViewAllWords, IModelAdmins iModelAllWords) {
-        this.iViewAllWords = iViewAllWords;
-        this.iModelAllWords = iModelAllWords;
+        this.view = iViewAllWords;
+        this.iModelAdmins = iModelAllWords;
     }
 
     @Override
     public void requestDataFromServer() {
-        iModelAllWords.getArrayList(this);
+        view.showProgressBar();
+        iModelAdmins.getArrayList(this);
     }
 
     @Override
     public void onRefreshButtonClick() {
-        if(iViewAllWords!=null){
+        if(view !=null){
 
         }
-        iModelAllWords.getArrayList(this);
+        iModelAdmins.getArrayList(this);
 
 
     }
@@ -36,11 +37,12 @@ public class PresenterAdmins implements IPresenterAdmins, IModelAdmins.OnFinishe
     @Override
     public void onFinished(List<UsersAdmins> arrayList) {
 
-        iViewAllWords.setDataToRecyclerView(arrayList);
+        view.setDataToRecyclerView(arrayList);
+        view.hideProgressBar();
     }
 
     @Override
     public void onFailure(Throwable t) {
-        iViewAllWords.onResponseFailure(t);
+        view.onResponseFailure(t);
     }
 }
