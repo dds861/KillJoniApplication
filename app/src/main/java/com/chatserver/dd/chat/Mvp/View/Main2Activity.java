@@ -54,7 +54,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
             case R.id.btn_AllWords:
                 // TODO 18/09/06
                 intent = new Intent(getApplicationContext(), ActivityAllWords.class);
-
+                startActivity(intent);
                 break;
             case R.id.btn_Server:
                 // TODO 18/09/06
@@ -88,6 +88,6 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                 break;
 
         }
-        startActivity(intent);
+
     }
 }
