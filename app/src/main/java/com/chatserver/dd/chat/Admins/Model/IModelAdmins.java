@@ -8,7 +8,7 @@ public interface IModelAdmins {
     void  getArrayList(OnFinishedListener onFinishedListener);
 
     interface OnFinishedListener {
-        void onFinished(List<UsersAdmins> arrayList);
+        void resultsOnRequest(List<UsersAdmins> arrayList);
         void onFailure(Throwable t);
     }
 }

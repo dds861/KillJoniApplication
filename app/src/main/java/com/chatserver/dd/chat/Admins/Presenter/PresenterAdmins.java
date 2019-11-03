@@ -7,42 +7,47 @@ import com.chatserver.dd.chat.Admins.View.UsersAdmins;
 
 import java.util.List;
 
-public class PresenterAdmins implements IPresenterAdmins, IModelAdmins.OnFinishedListener {
+public class PresenterAdmins implements IPresenterAdmins {
 
 
     IViewAdmins view;
-    IModelAdmins iModelAdmins;
+    IModelAdmins model;
 
     public PresenterAdmins(IViewAdmins iViewAllWords, IModelAdmins iModelAllWords) {
         this.view = iViewAllWords;
-        this.iModelAdmins = iModelAllWords;
+        this.model = iModelAllWords;
     }
 
     @Override
     public void requestDataFromServer() {
         view.showProgressBar();
-        iModelAdmins.getArrayList(this);
+        model.getArrayList(new IModelAdmins.OnFinishedListener() {
+            @Override
+            public void resultsOnRequest(List<UsersAdmins> arrayList) {
+                view.setDataToRecyclerView(arrayList);
+                view.hideProgressBar();
+            }
+
+            @Override
+            public void onFailure(Throwable t) {
+                view.onResponseFailure(t);
+            }
+        });
     }
 
     @Override
     public void onRefreshButtonClick() {
-        if(view !=null){
+        model.getArrayList(new IModelAdmins.OnFinishedListener() {
+            @Override
+            public void resultsOnRequest(List<UsersAdmins> arrayList) {
+                view.setDataToRecyclerView(arrayList);
+                view.hideProgressBar();
+            }
 
-        }
-        iModelAdmins.getArrayList(this);
-
-
-    }
-
-    @Override
-    public void onFinished(List<UsersAdmins> arrayList) {
-
-        view.setDataToRecyclerView(arrayList);
-        view.hideProgressBar();
-    }
-
-    @Override
-    public void onFailure(Throwable t) {
-        view.onResponseFailure(t);
+            @Override
+            public void onFailure(Throwable t) {
+                view.onResponseFailure(t);
+            }
+        });
     }
 }

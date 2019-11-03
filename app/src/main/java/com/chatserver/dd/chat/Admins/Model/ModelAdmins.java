@@ -39,7 +39,7 @@ public class ModelAdmins implements IModelAdmins {
                 @Override
                 public void onResponse(Call<List<UsersAdmins>> call, Response<List<UsersAdmins>> response) {
 
-                    onFinishedListener.onFinished(response.body());
+                    onFinishedListener.resultsOnRequest(response.body());
 
                 }
 
