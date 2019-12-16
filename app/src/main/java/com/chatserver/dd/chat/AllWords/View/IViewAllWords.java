@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.AllWords.View;
+package com.chatserver.dd.chat.allwords.view;
 
 import java.util.List;
 

@@ -1,8 +1,4 @@
-package com.chatserver.dd.chat.AllWords.Presenter;
-
-import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
-
-import java.util.List;
+package com.chatserver.dd.chat.allwords.presenter;
 
 public interface IPresenterAllWords {
     void requestDataFromServer();
