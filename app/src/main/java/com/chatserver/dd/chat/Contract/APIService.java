@@ -2,11 +2,11 @@ package com.chatserver.dd.chat.Contract;
 
 
 import com.chatserver.dd.chat.Admins.View.UsersAdmins;
-import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
 import com.chatserver.dd.chat.Cmd.View.ViewConsoleCmd;
 import com.chatserver.dd.chat.Cmd.View.ViewStatusPlayers;
 import com.chatserver.dd.chat.Server.View.UsersServer;
 import com.chatserver.dd.chat.Vip.View.UsersVip;
+import com.chatserver.dd.chat.allwords.view.UsersAllWords;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.chatserver.dd.chat.Admins.View.ActivityAdmins;
-import com.chatserver.dd.chat.AllWords.View.ActivityAllWords;
+import com.chatserver.dd.chat.allwords.view.ActivityAllWords;
 import com.chatserver.dd.chat.Cmd.View.ActivityCmd;
 import com.chatserver.dd.chat.R;
 import com.chatserver.dd.chat.Server.View.ActivityServer;

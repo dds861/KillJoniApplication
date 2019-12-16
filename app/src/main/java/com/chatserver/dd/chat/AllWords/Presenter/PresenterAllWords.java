@@ -1,8 +1,8 @@
-package com.chatserver.dd.chat.AllWords.Presenter;
+package com.chatserver.dd.chat.allwords.presenter;
 
-import com.chatserver.dd.chat.AllWords.Model.IModelAllWords;
-import com.chatserver.dd.chat.AllWords.View.IViewAllWords;
-import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
+import com.chatserver.dd.chat.allwords.model.IModelAllWords;
+import com.chatserver.dd.chat.allwords.view.IViewAllWords;
+import com.chatserver.dd.chat.allwords.view.UsersAllWords;
 
 import java.util.List;
 

@@ -1,10 +1,10 @@
-package com.chatserver.dd.chat.AllWords.Model;
+package com.chatserver.dd.chat.allwords.model;
 
 
 import android.util.Log;
 
-import com.chatserver.dd.chat.AllWords.View.UsersAllWords;
 import com.chatserver.dd.chat.Contract.APIService;
+import com.chatserver.dd.chat.allwords.view.UsersAllWords;
 
 import java.util.List;
 

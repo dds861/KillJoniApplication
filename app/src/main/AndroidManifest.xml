@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AllWords.View.ActivityAllWords"
+            android:name=".allwords.view.ActivityAllWords"
             android:parentActivityName=".Mvp.View.Main2Activity"/>
         <activity
             android:name=".Server.View.ActivityServer"

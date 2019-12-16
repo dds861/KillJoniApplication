@@ -1,4 +1,4 @@
-package com.chatserver.dd.chat.AllWords.View;
+package com.chatserver.dd.chat.allwords.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.chatserver.dd.chat.AllWords.Model.ModelAllWords;
-import com.chatserver.dd.chat.AllWords.Presenter.PresenterAllWords;
+import com.chatserver.dd.chat.allwords.model.ModelAllWords;
+import com.chatserver.dd.chat.allwords.presenter.PresenterAllWords;
 import com.chatserver.dd.chat.R;
 
 import java.util.List;
