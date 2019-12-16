@@ -28,15 +28,15 @@ public class CmdMain {
 
 
             switch (radioGroup.getCheckedRadioButtonId()) {
-                case R.id.rbPlayersKick:
-                    cmdCommand = "amx_kick " + playerName1;
-                    break;
-                case R.id.rbPlayersSlap:
-                    cmdCommand = "amx_slap " + playerName1;
-                    break;
-                case R.id.rbPlayersSlay:
-                    cmdCommand = "amx_slay " + playerName1;
-                    break;
+//                case R.id.rbPlayersKick:
+//                    cmdCommand = "amx_kick " + playerName1;
+//                    break;
+//                case R.id.rbPlayersSlap:
+//                    cmdCommand = "amx_slap " + playerName1;
+//                    break;
+//                case R.id.rbPlayersSlay:
+//                    cmdCommand = "amx_slay " + playerName1;
+//                    break;
 //                case R.id.rbPlayersBan:
 //                    cmdCommand = "amx_ban 10 " + playerName1 + " banned";
 //                    break;

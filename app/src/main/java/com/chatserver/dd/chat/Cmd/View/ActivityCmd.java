@@ -34,28 +34,28 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
 
     private RecyclerView mRecyclerViewMain;
     private PresenterCmd presenterCmd;
-    private RadioButton mRbPlayersKick;
-    private RadioButton mRbPlayersSlap;
-    private RadioButton mRbPlayersSlay;
-    private RadioGroup radioGroup;
+//    private RadioButton mRbPlayersKick;
+//    private RadioButton mRbPlayersSlap;
+//    private RadioButton mRbPlayersSlay;
+//    private RadioGroup radioGroup;
 
     private Button mSendBtn;
     private EditText mEtTextCommands;
     private FloatingActionButton mBtnCmdFl;
-    private RadioButton mAmxChatRb;
-    private RadioButton mAmxPsayRb;
-    private RadioButton mAmxSayRb;
-    private CardView mCmdCommandsCv;
+//    private RadioButton mAmxChatRb;
+//    private RadioButton mAmxPsayRb;
+//    private RadioButton mAmxSayRb;
+//    private CardView mCmdCommandsCv;
     private Button mClearEdittextBtn;
-    private CardView mEdittextCv;
-    private ConstraintLayout mPlayersTopBarsCv;
-    private RadioButton mRbPlayersBan;
-    private RadioButton mAmxBanipRb;
-    private RadioButton mRbPlayersGag;
-    private RadioButton mAmxSetfragsRb;
-    private RadioButton mAmxSetdeathsRb;
-    private RadioButton mAmxReloadadminsRb;
-    private RadioButton mAmxNickRb;
+//    private CardView mEdittextCv;
+//    private ConstraintLayout mPlayersTopBarsCv;
+//    private RadioButton mRbPlayersBan;
+//    private RadioButton mAmxBanipRb;
+//    private RadioButton mRbPlayersGag;
+//    private RadioButton mAmxSetfragsRb;
+//    private RadioButton mAmxSetdeathsRb;
+//    private RadioButton mAmxReloadadminsRb;
+//    private RadioButton mAmxNickRb;
     private RelativeLayout mEdittextRelativeLayout;
     private Disposable subscription;
     private ProgressBar mProgressBar;
@@ -98,24 +98,24 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
     private void initView() {
 
         mRecyclerViewMain = (RecyclerView) findViewById(R.id.recycler_view_players);
-        mRbPlayersKick = (RadioButton) findViewById(R.id.rbPlayersKick);
-        mRbPlayersSlap = (RadioButton) findViewById(R.id.rbPlayersSlap);
-        mRbPlayersSlay = (RadioButton) findViewById(R.id.rbPlayersSlay);
-
-        mAmxChatRb = (RadioButton) findViewById(R.id.rb_amx_chat);
-        mAmxPsayRb = (RadioButton) findViewById(R.id.rb_amx_psay);
-        mAmxSayRb = (RadioButton) findViewById(R.id.rb_amx_say);
+//        mRbPlayersKick = (RadioButton) findViewById(R.id.rbPlayersKick);
+//        mRbPlayersSlap = (RadioButton) findViewById(R.id.rbPlayersSlap);
+//        mRbPlayersSlay = (RadioButton) findViewById(R.id.rbPlayersSlay);
+//
+//        mAmxChatRb = (RadioButton) findViewById(R.id.rb_amx_chat);
+//        mAmxPsayRb = (RadioButton) findViewById(R.id.rb_amx_psay);
+//        mAmxSayRb = (RadioButton) findViewById(R.id.rb_amx_say);
         mEtTextCommands = (EditText) findViewById(R.id.etTextCommands);
-        mRbPlayersBan = (RadioButton) findViewById(R.id.rbPlayersBan);
-        mAmxBanipRb = (RadioButton) findViewById(R.id.rb_amx_banip);
-        mRbPlayersGag = (RadioButton) findViewById(R.id.rbPlayersGag);
-        mAmxSetfragsRb = (RadioButton) findViewById(R.id.rb_amx_setfrags);
-        mAmxSetdeathsRb = (RadioButton) findViewById(R.id.rb_amx_setdeaths);
-        mAmxReloadadminsRb = (RadioButton) findViewById(R.id.rb_amx_reloadadmins);
-        mAmxNickRb = (RadioButton) findViewById(R.id.rb_amx_nick);
+//        mRbPlayersBan = (RadioButton) findViewById(R.id.rbPlayersBan);
+//        mAmxBanipRb = (RadioButton) findViewById(R.id.rb_amx_banip);
+//        mRbPlayersGag = (RadioButton) findViewById(R.id.rbPlayersGag);
+//        mAmxSetfragsRb = (RadioButton) findViewById(R.id.rb_amx_setfrags);
+//        mAmxSetdeathsRb = (RadioButton) findViewById(R.id.rb_amx_setdeaths);
+//        mAmxReloadadminsRb = (RadioButton) findViewById(R.id.rb_amx_reloadadmins);
+//        mAmxNickRb = (RadioButton) findViewById(R.id.rb_amx_nick);
 
-        radioGroup = (RadioGroup) findViewById(R.id.rb_groupPlayers);
-        radioGroup.setOnCheckedChangeListener(this);
+//        radioGroup = (RadioGroup) findViewById(R.id.rb_groupPlayers);
+//        radioGroup.setOnCheckedChangeListener(this);
 
         mSendBtn = (Button) findViewById(R.id.btn_send);
         mSendBtn.setOnClickListener(this);
@@ -128,9 +128,9 @@ public class ActivityCmd extends AppCompatActivity implements IViewCmd, View.OnC
 
         //не нужные можно удалить
         mEdittextRelativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout_edittext);
-        mCmdCommandsCv = (CardView) findViewById(R.id.cv_cmd_commands);
-        mEdittextCv = (CardView) findViewById(R.id.cv_edittext);
-        mPlayersTopBarsCv = findViewById(R.id.cv_players_top_bars);
+//        mCmdCommandsCv = (CardView) findViewById(R.id.cv_cmd_commands);
+//        mEdittextCv = (CardView) findViewById(R.id.cv_edittext);
+//        mPlayersTopBarsCv = findViewById(R.id.cv_players_top_bars);
 
 
         mProgressBar = (ProgressBar) findViewById(R.id.progress_bar);

@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.chatserver.dd.chat.Contract.APIService;
 import com.chatserver.dd.chat.allwords.view.UsersAllWords;
+import com.chatserver.dd.chat.constants.ConstantsApp;
 
 import java.util.List;
 
@@ -22,13 +23,12 @@ public class ModelAllWords implements IModelAllWords {
 
 
         try {
-            String url = "http://killjoniast.myarena.ru/android/";
 
             Retrofit retrofit = null;
 
             if (retrofit == null) {
                 retrofit = new Retrofit.Builder()
-                        .baseUrl(url)
+                        .baseUrl(ConstantsApp.URL)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
             }

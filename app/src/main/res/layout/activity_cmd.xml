@@ -3,149 +3,153 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fl_btn_cmd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="24dp"
+
+        android:background="@color/cardview_dark_background"
 
         android:clickable="true"
         android:src="@android:drawable/stat_notify_sync_noanim" />
 
 
-    <android.support.v7.widget.CardView
+<!--    <android.support.v7.widget.CardView-->
+<!--        android:id="@+id/cv_cmd_commands"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@id/cv_edittext"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:background="@color/cardview_dark_background"-->
+<!--        app:cardCornerRadius="5dp">-->
 
-        android:id="@+id/cv_cmd_commands"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/cv_edittext"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="5dp">
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/cardview_dark_background">-->
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+<!--            <LinearLayout-->
 
-            <LinearLayout
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
 
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+<!--                <RadioGroup-->
 
-                <RadioGroup
+<!--                    android:id="@+id/rb_groupPlayers"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="4dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    android:id="@+id/rb_groupPlayers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="4dp"
-                    android:orientation="vertical">
+<!--                    &lt;!&ndash;<GridLayout&ndash;&gt;-->
+<!--                    &lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+<!--                    &lt;!&ndash;android:columnCount="3"&ndash;&gt;-->
+<!--                    &lt;!&ndash;android:rowCount="3">&ndash;&gt;-->
 
-                    <!--<GridLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:columnCount="3"-->
-                    <!--android:rowCount="3">-->
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbPlayersKick"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/kick" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbPlayersKick"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/kick" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbPlayersSlap"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/slap" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbPlayersSlap"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/slap" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbPlayersSlay"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/slay" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbPlayersSlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/slay" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_chat"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="amx_chat" />-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_chat"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="amx_chat" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_psay"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="amx_psay" />-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_psay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="amx_psay" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_say"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="amx_say" />-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_say"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="amx_say" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbPlayersBan"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/ban" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbPlayersBan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ban" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_banip"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_banip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+<!--                        android:text="amx_banip" />-->
 
-                        android:text="amx_banip" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rbPlayersGag"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/gag" />-->
 
-                    <RadioButton
-                        android:id="@+id/rbPlayersGag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/gag" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_setfrags"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_setfrags"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+<!--                        android:text="amx_setfrags" />-->
 
-                        android:text="amx_setfrags" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_setdeaths"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_setdeaths"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+<!--                        android:text="amx_setdeaths" />-->
 
-                        android:text="amx_setdeaths" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_reloadadmins"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_reloadadmins"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+<!--                        android:text="amx_reloadadmins" />-->
 
-                        android:text="amx_reloadadmins" />
+<!--                    <RadioButton-->
+<!--                        android:id="@+id/rb_amx_nick"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
 
-                    <RadioButton
-                        android:id="@+id/rb_amx_nick"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:text="amx_nick" />
-
-
-                </RadioGroup>
+<!--                        android:text="amx_nick" />-->
 
 
-            </LinearLayout>
-        </ScrollView>
-    </android.support.v7.widget.CardView>
+<!--                </RadioGroup>-->
+
+
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
+<!--    </android.support.v7.widget.CardView>-->
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv_edittext"
@@ -153,8 +157,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_send"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
+
+        android:layout_marginRight="5dp"
+        android:background="@color/cardview_dark_background"
         android:focusable="true"
         android:focusableInTouchMode="true"
         app:cardCornerRadius="5dp">
@@ -162,31 +168,33 @@
         <RelativeLayout
             android:id="@+id/relativeLayout_edittext"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_dark_background">
 
 
             <EditText
                 android:id="@+id/etTextCommands"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
                 android:layout_toLeftOf="@id/btn_clear_edittext"
                 android:gravity="center"
                 android:hint="text"
                 android:lines="2"
+                android:textColor="@color/colorAccent"
                 android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_clear_edittext"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_gravity="right|center_vertical"
-                android:text="x" />
+                android:background="@color/cardview_dark_background"
+                android:text="x"
+                android:textColor="@color/colorAccent" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -196,20 +204,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@id/fl_btn_cmd"
+        android:background="@color/cardview_dark_background"
         android:padding="32dp"
-        android:text="send" />
+        android:text="send"
+        android:textColor="@color/colorAccent" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cv_players_top_bars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/cv_edittext"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toEndOf="@id/cv_cmd_commands"
-        android:layout_toRightOf="@id/cv_cmd_commands">
+        android:layout_marginTop="5dp">
 
 
         <android.support.v7.widget.RecyclerView
@@ -219,8 +229,10 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
