@@ -12,7 +12,7 @@ import com.chatserver.dd.chat.model.Status
 import kotlinx.android.synthetic.main.activity_player.*
 
 
-class ActivityPlayers : AppCompatActivity() {
+class ActivityPlayers : AppCompatActivity(), UIEventManager {
 
     private lateinit var viewModel: ViewModelPlayersActivity
 
@@ -20,44 +20,20 @@ class ActivityPlayers : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
 
-        init()
-
-        showToast("Started")
-        progress_bar.visibility = View.VISIBLE
+        val viewModelPlayersActivityFactory = ViewModelPlayersActivityFactory(this)
+        viewModel = ViewModelProvider(this, viewModelPlayersActivityFactory).get(ViewModelPlayersActivity::class.java)
         getData()
-    }
 
-    private fun getLiveData() {
-        viewModel = ViewModelProvider(this).get(ViewModelPlayersActivity::class.java)
-
-    }
-
-    private fun init() {
         fl_btn_cmd.setOnClickListener {
-            tv_list_is_empty.visibility = View.GONE
-            progress_bar.visibility = View.VISIBLE
             getData()
         }
     }
 
     private fun getData() {
-        getLiveData()
         viewModel.liveData.observe(this, Observer {
-
-            progress_bar.visibility = View.GONE
-
-            if (it.data.p.isEmpty()) {
-                tv_list_is_empty.visibility = View.VISIBLE
-            } else {
-                tv_list_is_empty.visibility = View.VISIBLE
-            }
 
             setDataToRecyclerView(it)
         })
-    }
-
-    private fun showToast(text: String) {
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
     }
 
     fun setDataToRecyclerView(status: Status) {
@@ -65,5 +41,25 @@ class ActivityPlayers : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@ActivityPlayers)
             adapter = AdapterPlayers(status)
         }
+    }
+
+    override fun viewProgressBar() {
+        progress_bar.visibility = View.VISIBLE
+    }
+
+    override fun stopProgressBar() {
+        progress_bar.visibility = View.GONE
+    }
+
+    override fun viewEmptyText() {
+        tv_list_is_empty.visibility = View.VISIBLE
+    }
+
+    override fun stopEmptyText() {
+        tv_list_is_empty.visibility = View.GONE
+    }
+
+    override fun viewToast(s: String) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
     }
 }
