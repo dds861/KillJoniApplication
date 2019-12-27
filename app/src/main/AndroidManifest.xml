@@ -3,6 +3,7 @@
     package="com.chatserver.dd.chat">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Mvp.View.Main2Activity"
+            android:name=".mvp.MainActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,20 +24,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".allwords.view.ActivityAllWords"
-            android:parentActivityName=".Mvp.View.Main2Activity"/>
+            android:name=".blocks.server.ActivityServer"
+            android:parentActivityName=".mvp.MainActivity"/>
         <activity
-            android:name=".Server.View.ActivityServer"
-            android:parentActivityName=".Mvp.View.Main2Activity"/>
+            android:name=".blocks.vip.ActivityVip"
+            android:parentActivityName=".mvp.MainActivity"/>
         <activity
-            android:name=".Vip.View.ActivityVip"
-            android:parentActivityName=".Mvp.View.Main2Activity"/>
+            android:name=".blocks.admin.ActivityAdmin"
+            android:parentActivityName=".mvp.MainActivity"/>
         <activity
-            android:name=".Admins.View.ActivityAdmins"
-            android:parentActivityName=".Mvp.View.Main2Activity"/>
+            android:name=".blocks.players.ActivityPlayers"
+            android:parentActivityName=".mvp.MainActivity"/>
         <activity
-            android:name=".Cmd.View.ActivityCmd"
-            android:parentActivityName=".Mvp.View.Main2Activity"/>
+            android:name=".blocks.chat.ActivityChat"
+            android:parentActivityName=".mvp.MainActivity"/>
     </application>
 
 </manifest>
