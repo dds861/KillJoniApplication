@@ -24,13 +24,13 @@ class ActivityPlayers : AppCompatActivity(), UIEventManager {
         viewModel = ViewModelProvider(this, viewModelPlayersActivityFactory).get(ViewModelPlayersActivity::class.java)
         getData()
 
-        fl_btn_cmd.setOnClickListener {
+        fab_btn_cmd.setOnClickListener {
             getData()
         }
     }
 
     private fun getData() {
-        viewModel.liveData.observe(this, Observer {
+        viewModel.getData().observe(this, Observer {
 
             setDataToRecyclerView(it)
         })

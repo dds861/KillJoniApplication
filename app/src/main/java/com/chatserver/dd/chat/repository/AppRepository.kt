@@ -21,4 +21,10 @@ class AppRepository {
             ConstantsApp.STATUS,
             ConstantsApp.TOKEN_MYARENA
     )
+
+    suspend fun sendMessage(messageToSend: String): ConsoleResponse = serviceMyArena.executeСonsoleСommand(
+            ConstantsApp.QUERY,
+            messageToSend,
+            ConstantsApp.TOKEN_MYARENA
+    )
 }

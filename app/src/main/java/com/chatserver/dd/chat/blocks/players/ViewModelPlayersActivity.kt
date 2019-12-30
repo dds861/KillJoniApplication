@@ -8,15 +8,13 @@ import java.io.IOException
 
 class ViewModelPlayersActivity(private val eventManager: UIEventManager) : ViewModel() {
     private val repository = AppRepository()
-    val liveData = liveData {
+    fun getData() = liveData {
         try {
             eventManager.viewProgressBar()
 
             val receivedData = repository.getStatus()
 
             eventManager.stopProgressBar()
-            eventManager.viewToast("Successfully done")
-
             if (receivedData.data.p.isEmpty()) {
                 eventManager.viewEmptyText()
             } else {

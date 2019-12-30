@@ -46,4 +46,12 @@ interface ApiService {
             @Query("token") token: String
     ): Status
 
+    //execute console command
+    @GET("api.php")
+    suspend fun executeСonsoleСommand(
+            @Query("query") query: String,
+            @Query("cmd") cmd: String,
+            @Query("token") token: String
+    ): ConsoleResponse
+
 }
