@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recycler_view_players"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@id/tvInfoTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_list_is_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_is_empty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInfoTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 1 hour: 3600\n
+2 hour: 7200\n
+3 hour: 10800\n
+4 hour: 14400\n
+5 hour: 18000\n
+6 hour: 21600\n
+7 hour: 25200\n
+12 hour: 43200\n
+1 day: 86400\n
+2 days: 172800\n
+3 day: 259200\n
+4 days: 309600\n
+7 days: 604800\n
+14 days: 1209600\n
+21 days: 1814400\n
+30 days: 2592000\n"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etTextCommands"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:hint="text"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvInfoTime"
+        app:layout_constraintTop_toTopOf="@id/tvInfoTime" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="95dp"
+        android:layout_height="100dp"
+        android:background="@color/cardview_dark_background"
+        android:text="send"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvInfoTime" />
+
+    <Button
+        android:id="@+id/btn_clear_edittext"
+        android:layout_width="96dp"
+        android:layout_height="100dp"
+        android:background="@color/cardview_dark_background"
+        android:text="x"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/IbRefresh"
+        app:layout_constraintStart_toEndOf="@id/btn_send" />
+
+
+    <ImageButton
+        android:id="@+id/IbRefresh"
+        android:layout_width="96dp"
+        android:layout_height="100dp"
+        android:background="@color/cardview_dark_background"
+        android:clickable="true"
+
+        android:src="@android:drawable/stat_notify_sync_noanim"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

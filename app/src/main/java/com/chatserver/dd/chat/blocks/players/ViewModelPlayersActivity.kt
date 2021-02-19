@@ -30,4 +30,12 @@ class ViewModelPlayersActivity(private val eventManager: UIEventManager) : ViewM
             eventManager.stopProgressBar()
         }
     }
+
+     fun onSetGiveVipCommand(playerName: String) {
+        val textInEdittext = iViewCmd.edittext
+        val ary = textInEdittext?.split(" ".toRegex())?.toTypedArray()
+        iViewCmd.edittext = (ary?.get(0) ?: "") + " " + playerName
+        iViewCmd.edittext = "flags_add_user \"${playerName}\" \"t\" \"+7200\" \"${playerName}\" \"FreeVip\""
+    }
+
 }
